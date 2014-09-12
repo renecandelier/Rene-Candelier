@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>808B39FF-9198-4E59-B148-68AFE632585F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Rene Candelier</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>101BABF95E27DE5DEA5DA3A11BBE1B8EC096047F</key>
+		<string>https://github.com/renecandelier/Rene-Candelier.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Rene Candelier/Rene Candelier.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>101BABF95E27DE5DEA5DA3A11BBE1B8EC096047F</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/renecandelier/Rene-Candelier.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>101BABF95E27DE5DEA5DA3A11BBE1B8EC096047F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>101BABF95E27DE5DEA5DA3A11BBE1B8EC096047F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Rene-Candelier</string>
+		</dict>
+	</array>
+</dict>
+</plist>

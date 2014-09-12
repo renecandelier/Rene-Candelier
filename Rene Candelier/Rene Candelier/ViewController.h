@@ -8,8 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *profilePicture;
+@property (nonatomic) NSString * link;
+- (IBAction)resumeButon:(id)sender;
+- (IBAction)gitHubButton:(id)sender;
+- (IBAction)contactButton:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIScrollView *appScroll;
+-(void)showModalViewController;
 @end
 
