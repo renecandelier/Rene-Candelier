@@ -14,14 +14,28 @@
 @property (weak, nonatomic) IBOutlet UIButton *sendResumeButton;
 @property (weak, nonatomic) IBOutlet UIButton *refreshButton;
 
+
+
 @end
 
-@implementation webVC
+@implementation webVC{
+    UIActivityIndicatorView*activityind;
+
+}
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
+-(void)webViewDidStartLoad:(UIWebView *)webView{
+    
+    [activityind startAnimating];
+    
+}
 
+-(void)webViewDidFinishLoad:(UIWebView *)webView{
+    
+    [activityind stopAnimating];
+}
 -(void)showModalViewController {
     
     [self performSegueWithIdentifier: @"contact" sender:self];
@@ -56,6 +70,14 @@
     
     _link = link;
  
+    
+    activityind=[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    activityind.center = CGPointMake(30, SCREEN_HEIGHT-30);
+    
+    
+    [activityind startAnimating];
+    
+
     
     
     
@@ -122,6 +144,9 @@
         [self.webView loadRequest:requestObj];
         
     }
+    activityind.color = [UIColor colorWithRed:0.173f green:0.827f blue:0.718f alpha:1.0f];
+    [self.view addSubview:activityind];
+
 }
 
 
