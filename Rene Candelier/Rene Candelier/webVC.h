@@ -11,6 +11,7 @@
 @interface webVC : UIViewController
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (nonatomic) NSString * link;
+- (IBAction)sendResumeButton:(id)sender;
 
 //Segue for the Contact Button
 -(void)showModalViewController;

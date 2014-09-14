@@ -22,6 +22,8 @@
 		8A93FDEF19C46F4E003AEB50 /* phone8.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A93FDEE19C46F4E003AEB50 /* phone8.png */; };
 		8A93FDF119C46FC5003AEB50 /* mail20.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A93FDF019C46FC5003AEB50 /* mail20.png */; };
 		8A9BDB9919C5DE9100BA7F5F /* Rene.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8A9BDB9819C5DE9100BA7F5F /* Rene.pdf */; };
+		8A9BDB9B19C5E92B00BA7F5F /* SendResume.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A9BDB9A19C5E92B00BA7F5F /* SendResume.png */; };
+		8A9BDB9E19C5EA7C00BA7F5F /* ResumePopUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A9BDB9D19C5EA7C00BA7F5F /* ResumePopUp.m */; };
 		8AA13C4919BE1881006DC5D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA13C4819BE1881006DC5D0 /* main.m */; };
 		8AA13C4C19BE1881006DC5D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA13C4B19BE1881006DC5D0 /* AppDelegate.m */; };
 		8AA13C4F19BE1881006DC5D0 /* Rene_Candelier.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8AA13C4D19BE1881006DC5D0 /* Rene_Candelier.xcdatamodeld */; };
@@ -73,6 +75,9 @@
 		8A93FDEE19C46F4E003AEB50 /* phone8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone8.png; sourceTree = "<group>"; };
 		8A93FDF019C46FC5003AEB50 /* mail20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail20.png; sourceTree = "<group>"; };
 		8A9BDB9819C5DE9100BA7F5F /* Rene.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Rene.pdf; sourceTree = "<group>"; };
+		8A9BDB9A19C5E92B00BA7F5F /* SendResume.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SendResume.png; sourceTree = "<group>"; };
+		8A9BDB9C19C5EA7C00BA7F5F /* ResumePopUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResumePopUp.h; sourceTree = "<group>"; };
+		8A9BDB9D19C5EA7C00BA7F5F /* ResumePopUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResumePopUp.m; sourceTree = "<group>"; };
 		8AA13C4319BE1881006DC5D0 /* Rene Candelier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rene Candelier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA13C4719BE1881006DC5D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AA13C4819BE1881006DC5D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -176,6 +181,8 @@
 				8AA13C5319BE1881006DC5D0 /* Main.storyboard */,
 				8A03290619C26A9D0049F8E9 /* DestinationViewController.h */,
 				8A03290719C26A9D0049F8E9 /* DestinationViewController.m */,
+				8A9BDB9C19C5EA7C00BA7F5F /* ResumePopUp.h */,
+				8A9BDB9D19C5EA7C00BA7F5F /* ResumePopUp.m */,
 				8AA13CD119BFDE30006DC5D0 /* PDF.h */,
 				8AA13CD219BFDE30006DC5D0 /* PDF.m */,
 				8AA13C7219BE2196006DC5D0 /* Images */,
@@ -215,6 +222,7 @@
 		8AA13C7219BE2196006DC5D0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				8A9BDB9A19C5E92B00BA7F5F /* SendResume.png */,
 				8A03291019C299860049F8E9 /* flag3.png */,
 				8A03291219C29A670049F8E9 /* BOLCCAPPIcon120i.png */,
 				8A8FFCA719C32AE3000DE373 /* flight.jpg */,
@@ -320,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A03291119C299860049F8E9 /* flag3.png in Resources */,
+				8A9BDB9B19C5E92B00BA7F5F /* SendResume.png in Resources */,
 				8AE2439119C3231D0030842C /* Icon-120.png in Resources */,
 				8A93FDEF19C46F4E003AEB50 /* phone8.png in Resources */,
 				8A8FFCA819C32AE3000DE373 /* flight.jpg in Resources */,
@@ -363,6 +372,7 @@
 				8AA13CD319BFDE30006DC5D0 /* PDF.m in Sources */,
 				8AA13C4F19BE1881006DC5D0 /* Rene_Candelier.xcdatamodeld in Sources */,
 				8AA13C4C19BE1881006DC5D0 /* AppDelegate.m in Sources */,
+				8A9BDB9E19C5EA7C00BA7F5F /* ResumePopUp.m in Sources */,
 				8AA13C8919BE8269006DC5D0 /* webVC.m in Sources */,
 				8AA13C5219BE1881006DC5D0 /* ViewController.m in Sources */,
 				8A03290F19C26BAF0049F8E9 /* UIImage+ImageEffects.m in Sources */,

@@ -11,6 +11,8 @@
 #import "AFBlurSegue.h"
 
 @interface webVC ()<UIWebViewDelegate>
+@property (weak, nonatomic) IBOutlet UIButton *sendResumeButton;
+@property (weak, nonatomic) IBOutlet UIButton *refreshButton;
 
 @end
 
@@ -26,10 +28,16 @@
     
 }
 
+-(void)sendResume {
+    
+    [self performSegueWithIdentifier: @"sendResume" sender:self];
+    
+}
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     UIViewController *destination = segue.destinationViewController;
-    if ([segue.identifier isEqualToString:@"contact"]){
+    if ([segue.identifier isEqualToString:@"contact"]||[segue.identifier isEqualToString:@"sendResume"]){
         
         destination.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
         
@@ -89,6 +97,12 @@
     
     if ([self.link isEqualToString:@"Rene"]) {
         
+        
+        self.sendResumeButton.hidden = NO;
+        self.refreshButton.hidden = YES;
+
+        
+        
         NSString *path = [[NSBundle mainBundle] pathForResource:@"Rene"ofType:@"pdf"];
         NSURL *targetURL = [NSURL fileURLWithPath:path];
         NSData *pdfData = [[NSData alloc] initWithContentsOfURL:targetURL];
@@ -99,6 +113,10 @@
         
     }else{
         
+    
+        self.sendResumeButton.hidden = YES;
+        self.refreshButton.hidden = NO;
+
         NSURL *url = [NSURL URLWithString:self.link];
         NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
         [self.webView loadRequest:requestObj];
@@ -107,31 +125,13 @@
 }
 
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-  
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
 -(void)backButtonClicked{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)sendResumeButton:(id)sender {
+    [self sendResume];
+
 }
-*/
-
 @end

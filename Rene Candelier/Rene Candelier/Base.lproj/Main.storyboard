@@ -58,7 +58,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="7N5-Zz-TqC">
-                                <rect key="frame" x="217.99999867320037" y="89" width="86" height="33"/>
+                                <rect key="frame" x="218" y="89" width="86" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -213,48 +213,31 @@
                                     <action selector="reload" destination="TKv-5g-2wW" eventType="touchUpInside" id="XDg-Ts-bUM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Mzc-7T-cte">
+                                <rect key="frame" x="266" y="517" width="54" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="SendResume.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendResumeButton:" destination="ImB-Om-v8E" eventType="touchUpInside" id="T8o-6d-2DB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="jn9-9j-E7R"/>
                     <connections>
+                        <outlet property="refreshButton" destination="Dqj-0V-GcQ" id="GEn-to-9Zt"/>
+                        <outlet property="sendResumeButton" destination="Mzc-7T-cte" id="ew9-nX-O7H"/>
                         <outlet property="webView" destination="TKv-5g-2wW" id="3pB-Nr-cAU"/>
                         <segue destination="uEV-4f-TMQ" kind="custom" identifier="contact" customClass="AFBlurSegue" id="m1n-CW-ggV"/>
+                        <segue destination="NIS-Bs-Uk6" kind="custom" identifier="sendResume" customClass="AFBlurSegue" id="RPZ-Ma-Akb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tg9-ez-NgY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="652" y="315"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="UDd-KK-SkB">
-            <objects>
-                <viewController id="om3-g3-WcE" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gzm-D8-LkS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="tgD-w8-zga">
-                                <rect key="frame" x="0.0" y="54" width="320" height="514"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="9tj-gp-w80">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9tj-gp-w80" id="mi2-JR-kzu">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="04g-yH-S29" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1029" y="318"/>
         </scene>
         <!--Destination View Controller-->
         <scene sceneID="0ha-lH-66e">
@@ -283,13 +266,43 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tlF-j4-CxZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="734" y="-239.5"/>
+            <point key="canvasLocation" x="717" y="-250.5"/>
+        </scene>
+        <!--Resume Pop Up-->
+        <scene sceneID="bP8-Ah-8Bj">
+            <objects>
+                <viewController storyboardIdentifier="ResumeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NIS-Bs-Uk6" customClass="ResumePopUp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oTr-N3-8VQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="323"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DfS-Rl-jrC">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="314" height="568"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="323"/>
+                    <connections>
+                        <outlet property="closeButton" destination="DfS-Rl-jrC" id="gzh-pJ-DNn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cDQ-sW-tNI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="652" y="881.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="BOLCCAPPIcon120i.png" width="120" height="120"/>
         <image name="Icon-120.png" width="120" height="120"/>
         <image name="Rene Candelier2.png" width="374" height="373"/>
+        <image name="SendResume.png" width="128" height="128"/>
         <image name="charadsAppIcon.png" width="120" height="120"/>
         <image name="flag3.png" width="120" height="120"/>
         <image name="flight.jpg" width="175" height="175"/>
