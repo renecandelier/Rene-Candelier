@@ -11,6 +11,5 @@
 @interface DestinationViewController : UIViewController
 
 @property (nonatomic, strong) IBOutlet UIButton *closeButton;
-@property (weak, nonatomic) IBOutlet UIView *pop;
 
 @end

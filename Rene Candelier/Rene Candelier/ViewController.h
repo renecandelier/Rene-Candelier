@@ -12,12 +12,20 @@
 @interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *profilePicture;
+
+//Link to load GITHUB
 @property (nonatomic) NSString * link;
+
+//Settings Up Buttons
 - (IBAction)resumeButon:(id)sender;
 - (IBAction)gitHubButton:(id)sender;
 - (IBAction)contactButton:(id)sender;
 
+//Scroll for the APPS
 @property (weak, nonatomic) IBOutlet UIScrollView *appScroll;
+
+
+//Segue for the Contact Button
 -(void)showModalViewController;
 @end
 

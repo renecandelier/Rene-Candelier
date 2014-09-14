@@ -33,22 +33,24 @@
     [super viewDidLoad];
   
     
-    UIView *view =[[UIView alloc] initWithFrame:CGRectMake(50, 350, 250, 200)];
+    UIView *view =[[UIView alloc] initWithFrame:CGRectMake(50, 350, 250, 0)];
     view.backgroundColor = [UIColor blackColor];
-   // [self.view addSubview:view];
-    [UIView animateWithDuration:2.0f animations:^{
-        CGRect theFrame = view.frame;
-        theFrame.size.height += 10.f;
-        view.frame = theFrame;
-    }];
+    [self.view addSubview:view];
     
-    //self.appScroll.bounds.size.height = 1;
+    
+self.appScroll.backgroundColor = [UIColor whiteColor];
+    [UIView animateWithDuration:0.6 delay:.5 usingSpringWithDamping:0.5 initialSpringVelocity:0.5 options:UIViewAnimationOptionAllowUserInteraction animations:^{
+self.appScroll.backgroundColor = [UIColor lightGrayColor];
+        CGRect theFrame = self.appScroll.frame;
+        theFrame.size.height += 150.f;
+        self.appScroll.frame = theFrame;
+    } completion:nil];
+    
+   
     [self.appScroll setScrollEnabled:YES];
     [self.appScroll setDelegate:self];
-    self.appScroll.backgroundColor = [UIColor clearColor];
     self.appScroll.contentMode = UIViewContentModeScaleToFill;
     [self.appScroll setContentSize:CGSizeMake(self.appScroll.bounds.size.width+350,143.0)];
-    self.appScroll.backgroundColor = [UIColor lightGrayColor];
 
     
     
@@ -146,6 +148,8 @@
     
     [self showModalViewController];
 }
+
+
 
 
 @end

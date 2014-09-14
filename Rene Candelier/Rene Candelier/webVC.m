@@ -7,6 +7,8 @@
 //
 
 #import "webVC.h"
+#import "AFBlurSegue.h"
+#import "AFBlurSegue.h"
 
 @interface webVC ()<UIWebViewDelegate>
 
@@ -18,6 +20,29 @@
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
 
+-(void)showModalViewController {
+    
+    [self performSegueWithIdentifier: @"contact" sender:self];
+    
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    UIViewController *destination = segue.destinationViewController;
+    if ([segue.identifier isEqualToString:@"contact"]){
+        
+        destination.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        
+        
+        AFBlurSegue *blurSegue = (AFBlurSegue *)segue;
+        
+        blurSegue.blurRadius = 10;
+        blurSegue.tintColor = [UIColor colorWithRed:0 green:1 blue:0 alpha:1];
+        blurSegue.saturationDeltaFactor = 0.5;
+    }
+    
+    
+}
 
 -(void)setLink:(NSString *)link{
     
@@ -30,8 +55,8 @@
     
     UIImage *IMbuttonImage = [UIImage imageNamed:@"IM White.png"];
     [IMbutton setBackgroundImage:IMbuttonImage forState:UIControlStateNormal];
-    //    [backButton addTarget:self action:@selector(backButtonClicked) forControlEvents:UIControlEventTouchUpInside
-    //     ];
+    [IMbutton addTarget:self action:@selector(showModalViewController) forControlEvents:UIControlEventTouchUpInside
+     ];
     
     
     UIButton * backButton = [[UIButton alloc]initWithFrame:CGRectMake(20, 20, 30, 30)];
@@ -41,7 +66,6 @@
     [backButton addTarget:self action:@selector(backButtonClicked) forControlEvents:UIControlEventTouchUpInside
      ];
     
-    backButton.layer.borderColor = [UIColor grayColor].CGColor;
     
     UIView * headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 70)];
     

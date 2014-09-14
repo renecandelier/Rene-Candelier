@@ -12,4 +12,6 @@
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (nonatomic) NSString * link;
 
+//Segue for the Contact Button
+-(void)showModalViewController;
 @end
