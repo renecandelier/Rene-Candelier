@@ -100,7 +100,7 @@
     UIView * headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 70)];
     
     [self.view addSubview:headerView];
-    headerView.backgroundColor = [UIColor colorWithRed:0.180f green:0.835f blue:0.725f alpha:1.0f];
+    headerView.backgroundColor = [UIColor colorWithRed:0.302f green:0.600f blue:0.863f alpha:1.0f];
     
     
     UILabel * letsPlayLable = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-100, 15, 200, headerView.frame.size.height/2)];
@@ -125,12 +125,52 @@
 
         
         
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"Rene"ofType:@"pdf"];
-        NSURL *targetURL = [NSURL fileURLWithPath:path];
-        NSData *pdfData = [[NSData alloc] initWithContentsOfURL:targetURL];
-        [self.webView loadData:pdfData MIMEType:@"application/pdf" textEncodingName:@"UTF-8" baseURL:targetURL];
+//        NSString *path = [[NSBundle mainBundle] pathForResource:@"Candelier"ofType:@"pdf"];
+//        NSURL *targetURL = [NSURL fileURLWithPath:path];
+//        NSData *pdfData = [[NSData alloc] initWithContentsOfURL:targetURL];
+//        [self.webView loadData:pdfData MIMEType:@"application/pdf" textEncodingName:@"UTF-8" baseURL:targetURL];
+//        
+//         [self.webView setScalesPageToFit:YES];
+
         
-         [self.webView setScalesPageToFit:YES];
+        
+        
+        NSString *urlAddress = [[NSBundle mainBundle] pathForResource:@"Candelier" ofType:@"pdf"];
+        NSURL *url = [NSURL fileURLWithPath:urlAddress];
+        
+        NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+        
+    
+        [self.webView loadRequest:requestObj];
+        
+        
+        
+//        NSString *path = [[NSBundle mainBundle] pathForResource:@"Candelier" ofType:@"pdf"];
+//        NSURL *targetURL = [NSURL fileURLWithPath:path];
+//        NSURLRequest *request = [NSURLRequest requestWithURL:targetURL];
+//        [self.webView loadRequest:request];
+
+        
+        
+//        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+//                                                             
+//                                                             NSUserDomainMask, YES);
+//        
+//        NSString *documentsDirectory = [paths objectAtIndex:0];
+//        
+//        NSString *filePath = [documentsDirectory stringByAppendingPathExtension:@"Candelier.pdf"];
+//        
+//        NSURL *url = [NSURL fileURLWithPath:filePath];
+//        
+//        NSString *urlString = [url absoluteString];
+//        
+//        NSString *encodedString=[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+//        
+//        NSURL *webURL = [NSURL URLWithString:encodedString];
+//        
+//        NSURLRequest *request = [NSURLRequest requestWithURL:webURL];
+//        
+//        [self.webView loadRequest:request];
         
         
     }else{

@@ -20,6 +20,9 @@
 - (IBAction)resumeButon:(id)sender;
 - (IBAction)gitHubButton:(id)sender;
 - (IBAction)contactButton:(id)sender;
+- (IBAction)novus:(id)sender;
+- (IBAction)twitter:(id)sender;
+- (IBAction)linkedIn:(id)sender;
 
 //Scroll for the APPS
 @property (weak, nonatomic) IBOutlet UIScrollView *appScroll;

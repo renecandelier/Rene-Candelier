@@ -11,7 +11,6 @@
 #import "AFBlurSegue.h"
 #import "webVC.h"
 
-
 @interface ViewController ()<UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *actAp;
 @property (weak, nonatomic) IBOutlet UIButton *usaApp;
@@ -24,6 +23,7 @@
 
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 @implementation ViewController
+
 -(void)showModalViewController {
     
     [self performSegueWithIdentifier: @"blurSegue" sender:self];
@@ -34,13 +34,13 @@
   
     
     UIView *view =[[UIView alloc] initWithFrame:CGRectMake(50, 350, 250, 0)];
-    view.backgroundColor = [UIColor blackColor];
+    view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:view];
     
     
 self.appScroll.backgroundColor = [UIColor whiteColor];
-    [UIView animateWithDuration:0.6 delay:.5 usingSpringWithDamping:0.5 initialSpringVelocity:0.5 options:UIViewAnimationOptionAllowUserInteraction animations:^{
-self.appScroll.backgroundColor = [UIColor lightGrayColor];
+    [UIView animateWithDuration:1.2 delay:.5 usingSpringWithDamping:1.2 initialSpringVelocity:1.2 options:UIViewAnimationOptionAllowUserInteraction animations:^{
+self.appScroll.backgroundColor = [UIColor groupTableViewBackgroundColor];
         CGRect theFrame = self.appScroll.frame;
         theFrame.size.height += 150.f;
         self.appScroll.frame = theFrame;
@@ -88,7 +88,7 @@ self.appScroll.backgroundColor = [UIColor lightGrayColor];
     UIView * headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 70)];
     
     [self.view addSubview:headerView];
-    headerView.backgroundColor = [UIColor colorWithRed:0.180f green:0.835f blue:0.725f alpha:1.0f];
+    headerView.backgroundColor = [UIColor colorWithRed:0.302f green:0.600f blue:0.863f alpha:1.0f];
     
     
     UILabel * letsPlayLable = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-100, 15, 200, headerView.frame.size.height/2)];
@@ -149,7 +149,23 @@ self.appScroll.backgroundColor = [UIColor lightGrayColor];
     [self showModalViewController];
 }
 
+- (IBAction)novus:(id)sender {
+    self.link = @"http://www.novusmobile.com/";
+    
+    [self performSegueWithIdentifier:@"web" sender:self];
+}
 
+- (IBAction)twitter:(id)sender {
+    self.link = @"https://twitter.com/renecandelier";
+    
+    [self performSegueWithIdentifier:@"web" sender:self];
+}
+- (IBAction)linkedIn:(id)sender{
+    self.link = @"https://www.linkedin.com/pub/rene-candelier/63/921/80";
+    
+    [self performSegueWithIdentifier:@"web" sender:self];
+    
+}
 
 
 @end

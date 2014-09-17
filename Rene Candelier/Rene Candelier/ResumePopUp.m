@@ -37,7 +37,7 @@
     
     //--------------------
     
-    UILabel * contactTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(contactView.bounds.size.width/2-150, 2, 300, 70)];
+    UILabel * contactTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(contactView.bounds.size.width/2-150, 2, 300, 50)];
     
     [contactTitleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:40]];
     contactTitleLabel.textAlignment = NSTextAlignmentCenter;
