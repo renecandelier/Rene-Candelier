@@ -24,6 +24,7 @@
 		8A2BD75A19C7CDEF00CFF205 /* social123.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A2BD75919C7CDEF00CFF205 /* social123.png */; };
 		8A2BD75C19C7D0CD00CFF205 /* novusWebSiteLogoLight.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A2BD75B19C7D0CD00CFF205 /* novusWebSiteLogoLight.png */; };
 		8A2BD75E19C7D80C00CFF205 /* Santo-Domingo-.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A2BD75D19C7D80C00CFF205 /* Santo-Domingo-.jpg */; };
+		8A2BFDC619C9BDD6009A78E8 /* bless.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8A2BFDC519C9BDD6009A78E8 /* bless.pdf */; };
 		8A36ABCE19C0979E00263121 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A36ABCD19C0979E00263121 /* close.png */; };
 		8A6581F319C50A1F001A2F92 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A6581F219C50A1F001A2F92 /* MessageUI.framework */; };
 		8A8FFCA819C32AE3000DE373 /* flight.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A8FFCA719C32AE3000DE373 /* flight.jpg */; };
@@ -91,6 +92,7 @@
 		8A2BD75919C7CDEF00CFF205 /* social123.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = social123.png; sourceTree = "<group>"; };
 		8A2BD75B19C7D0CD00CFF205 /* novusWebSiteLogoLight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = novusWebSiteLogoLight.png; sourceTree = "<group>"; };
 		8A2BD75D19C7D80C00CFF205 /* Santo-Domingo-.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Santo-Domingo-.jpg"; sourceTree = "<group>"; };
+		8A2BFDC519C9BDD6009A78E8 /* bless.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = bless.pdf; sourceTree = "<group>"; };
 		8A36ABCD19C0979E00263121 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		8A6581F219C50A1F001A2F92 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		8A8FFCA719C32AE3000DE373 /* flight.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = flight.jpg; path = Classes/flight.jpg; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				8A215B2C19C861DD009BA1CA /* Candelier.pdf */,
+				8A2BFDC519C9BDD6009A78E8 /* bless.pdf */,
 			);
 			name = "Resume PDF";
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				8A215B2D19C861DD009BA1CA /* Candelier.pdf in Resources */,
 				8A93FDE919C3BFDA003AEB50 /* U S A.png in Resources */,
 				8AA13C7419BE3074006DC5D0 /* IM White.png in Resources */,
+				8A2BFDC619C9BDD6009A78E8 /* bless.pdf in Resources */,
 				8A2BD75A19C7CDEF00CFF205 /* social123.png in Resources */,
 				8AA13C8419BE658E006DC5D0 /* resume.png in Resources */,
 				8A2BD75219C7C38600CFF205 /* tweet.png in Resources */,

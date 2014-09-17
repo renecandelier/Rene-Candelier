@@ -177,13 +177,13 @@
         mail.mailComposeDelegate=self;
         [mail setSubject:@"Rene Candelier's Resume"];
         
-        NSString * path = [[NSBundle mainBundle] pathForResource:@"Rene" ofType:@"pdf"];
+        NSString * path = [[NSBundle mainBundle] pathForResource:@"Candelier" ofType:@"pdf"];
         
         NSURL *targetURL = [NSURL fileURLWithPath:path];
         NSData * pdfDocumet =[NSData dataWithContentsOfURL:targetURL];
         
         
-        [mail addAttachmentData:pdfDocumet mimeType:@"Rene/pdf" fileName:@"Rene Candelier - iOS Resume.pdf"];
+        [mail addAttachmentData:pdfDocumet mimeType:@"Candelier/pdf" fileName:@"Rene Candelier - iOS Resume.pdf"];
         [mail setMessageBody:@"" isHTML:NO];
         [self presentViewController:mail animated:YES completion:nil];
     }

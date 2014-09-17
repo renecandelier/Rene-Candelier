@@ -125,30 +125,29 @@
 
         
         
-//        NSString *path = [[NSBundle mainBundle] pathForResource:@"Candelier"ofType:@"pdf"];
-//        NSURL *targetURL = [NSURL fileURLWithPath:path];
-//        NSData *pdfData = [[NSData alloc] initWithContentsOfURL:targetURL];
-//        [self.webView loadData:pdfData MIMEType:@"application/pdf" textEncodingName:@"UTF-8" baseURL:targetURL];
-//        
-//         [self.webView setScalesPageToFit:YES];
-
-        
-        
-        
-        NSString *urlAddress = [[NSBundle mainBundle] pathForResource:@"Candelier" ofType:@"pdf"];
-        NSURL *url = [NSURL fileURLWithPath:urlAddress];
-        
-        NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
-        
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"Candelier"ofType:@"pdf"];
+        NSLog(@"%@",path);
+        if (path) {
+            NSURL *targetURL = [NSURL fileURLWithPath:path];
+            NSData *pdfData = [[NSData alloc] initWithContentsOfURL:targetURL];
+            [self.webView loadData:pdfData MIMEType:@"application/pdf" textEncodingName:@"UTF-8" baseURL:targetURL];
+            
+            [self.webView setScalesPageToFit:YES];
+        }
+       
     
-        [self.webView loadRequest:requestObj];
-        
-        
-        
-//        NSString *path = [[NSBundle mainBundle] pathForResource:@"Candelier" ofType:@"pdf"];
-//        NSURL *targetURL = [NSURL fileURLWithPath:path];
-//        NSURLRequest *request = [NSURLRequest requestWithURL:targetURL];
-//        [self.webView loadRequest:request];
+//        NSString *urlAddress = [[NSBundle mainBundle] pathForResource:@"bless" ofType:@"pdf"];
+//        
+//        NSLog(@"%@",urlAddress);
+//        
+//        if (urlAddress) {
+//        NSURL *url = [NSURL fileURLWithPath:urlAddress];
+//        
+//        NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+//        
+//    
+//        [self.webView loadRequest:requestObj];
+//        }
 
         
         
